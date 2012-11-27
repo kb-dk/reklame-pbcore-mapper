@@ -1,0 +1,56 @@
+<PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
+    <pbcoreAssetType>Tv2reklamefilm</pbcoreAssetType>
+    <pbcoreIdentifier>
+        <identifier>[Cell L]</identifier>
+        <identifierSource>Statens Mediesamling TV2 reklamer 1988-2005</identifierSource>
+    </pbcoreIdentifier>
+    <pbcoreTitle>
+        <title>[Cell D]</title>
+    </pbcoreTitle>
+    <pbcoreTitle>
+        <title>[Cell F]</title>
+        <titleType>alternative</titleType>
+    </pbcoreTitle>
+    <pbcoreSubject>
+        <subject>[Cell B]</subject>
+        <subjectAuthorityUsed>Statens Mediesamling TV2 reklamer 1988-2005 vocabulary top-level</subjectAuthorityUsed>
+    </pbcoreSubject>
+    <pbcoreSubject>
+        <subject>[Cell C]</subject>
+        <subjectAuthorityUsed>Statens Mediesamling TV2 reklamer 1988-2005 vocabulary bottom-level</subjectAuthorityUsed>
+    </pbcoreSubject>
+    <pbcoreDescription>
+        <description/>
+    </pbcoreDescription>
+    <pbcoreGenre>
+        <genre>Advertising</genre>
+        <genreAuthorityUsed>EBUContentGenre</genreAuthorityUsed>
+    </pbcoreGenre>
+    <pbcoreCreator>
+        <creator>[Cell H]</creator>
+        <creatorRole>Creator</creatorRole>
+    </pbcoreCreator>
+    <pbcoreCreator>
+        <creator>[Cell I]</creator>
+        <creatorRole>Producer</creatorRole>
+    </pbcoreCreator>
+    <pbcoreCreator>
+        <creator>[Cell J]</creator>
+        <creatorRole>Production Unit</creatorRole>
+    </pbcoreCreator>
+    <pbcoreInstantiation>
+        <pbcoreFormatID>
+            <formatIdentifier>[Cell L]</formatIdentifier>
+            <formatIdentifierSource>Statens Mediesamling TV2 reklamer 1988-2005</formatIdentifierSource>
+        </pbcoreFormatID>
+        <dateIssued>[Cell G]</dateIssued>
+        <formatLocation>[Cell L].mpg</formatLocation>
+        <formatMediaType>Moving Image</formatMediaType>
+        <formatDuration>[Cell E]</formatDuration>
+        <language>dan<!--[Cell K]--></language>
+    </pbcoreInstantiation>
+    <pbcoreExtension>
+       <extension>locationoforiginalproduction: [Cell K]</extension>
+       <extensionAuthorityUsed>Statens Mediesamling TV2 reklamer 1988-2005</extensionAuthorityUsed>
+   </pbcoreExtension>
+</PBCoreDescriptionDocument>

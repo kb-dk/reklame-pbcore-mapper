@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>dk.statsbiblioteket.doms</groupId>
+        <artifactId>doms</artifactId>
+        <version>0.1.4</version>
+    </parent>
+
+    <groupId>dk.statsbiblioteket.doms.ingest</groupId>
+    <artifactId>reklame-pbcore-mapper</artifactId>
+    <version>0.1-SNAPSHOT</version>
+
+    <!-- TODO SCM -->
+    <!--
+    <scm>
+        <connection>scm:git:git://github.com/statsbiblioteket/doms-client.git</connection>
+        <developerConnection>scm:git:git@github.com:statsbiblioteket/doms-client.git</developerConnection>
+        <url>https://github.com/statsbiblioteket/doms-client</url>
+    </scm>
+    -->
+
+    <dependencies>
+        <dependency>
+            <groupId>dk.statsbiblioteket.sbutil</groupId>
+            <artifactId>sbutil</artifactId>
+            <version>0.5.5</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.9</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.jtds</groupId>
+            <artifactId>jtds</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+    </dependencies>
+</project>

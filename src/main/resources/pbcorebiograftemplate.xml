@@ -1,0 +1,96 @@
+<PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
+    <pbcoreAssetType>Biografreklamefilm</pbcoreAssetType>
+    <pbcoreIdentifier>
+        <identifier>[AdID]</identifier>
+        <identifierSource>Statens Mediesamling Biografreklamer 1954-1995</identifierSource>
+    </pbcoreIdentifier>
+    <pbcoreIdentifier>
+        <identifier>[identifierCensorshipCardNo]</identifier>
+        <identifierSource>Statens Mediesamling Biografreklamer 1954-1995 censorcardno</identifierSource>
+    </pbcoreIdentifier>
+    <pbcoreIdentifier>
+        <identifier>[identifierCensorshipCard]</identifier>
+        <identifierSource>Statens Mediesamling Biografreklamer 1954-1995 censorcardid</identifierSource>
+    </pbcoreIdentifier>
+    <pbcoreTitle>
+        <title>[title]</title>
+    </pbcoreTitle>
+    <pbcoreTitle>
+        <title>[titleAlternative]</title>
+        <titleType>alternative</titleType>
+    </pbcoreTitle>
+    <pbcoreSubject>
+        <subject>[subjectKeyword]</subject>
+        <subjectAuthorityUsed>Statens Mediesamling Biografreklamer 1954-1995 tags</subjectAuthorityUsed>
+    </pbcoreSubject>
+    <pbcoreSubject>
+        <subject>[subjectReklamefilm parent]</subject>
+        <subjectAuthorityUsed>Statens Mediesamling Biografreklamer 1954-1995 vocabulary</subjectAuthorityUsed>
+    </pbcoreSubject>
+    <pbcoreSubject>
+        <subject>[subjectReklamefilm child]</subject>
+        <subjectAuthorityUsed>Statens Mediesamling Biografreklamer 1954-1995 vocabulary</subjectAuthorityUsed>
+    </pbcoreSubject>
+    <pbcoreSubject>
+        <subject>[subject]</subject>
+        <subjectAuthorityUsed>Statens Mediesamling Biografreklamer 1954-1995 productadvertised</subjectAuthorityUsed>
+    </pbcoreSubject>
+    <pbcoreDescription>
+        <description/>
+    </pbcoreDescription>
+    <pbcoreGenre>
+        <genre>Advertising</genre>
+        <genreAuthorityUsed>EBUContentGenre</genreAuthorityUsed>
+    </pbcoreGenre>
+    <pbcoreCoverage>
+        <coverage>[covSpatial]</coverage>
+        <coverageType>Spatial</coverageType>
+    </pbcoreCoverage>
+    <pbcoreCoverage>
+        <coverage>[decade]</coverage>
+        <coverageType>Temporal</coverageType>
+    </pbcoreCoverage>
+    <pbcoreCreator>
+        <creator>[creator]</creator>
+        <creatorRole>[creatorRole]<!-- TODO from picklist --></creatorRole>
+    </pbcoreCreator>
+    <pbcoreContributor>
+        <contributor>[contributor]</contributor>
+        <contributorRole>[contributorRole]<!--TODO from picklist --></contributorRole>
+    </pbcoreContributor>
+    <pbcoreInstantiation>
+        <pbcoreFormatID>
+            <formatIdentifier>[AdID]</formatIdentifier>
+            <formatIdentifierSource>Statens Mediesamling Biografreklamer 1954-1995</formatIdentifierSource>
+        </pbcoreFormatID>
+        <dateIssued>[datePremiere]</dateIssued>
+        <formatLocation>[fileName]</formatLocation>
+        <formatMediaType>Moving Image</formatMediaType>
+        <formatDuration>[formatExtentDigital]</formatDuration>
+        <language>dan<!--[language]--></language>
+    </pbcoreInstantiation>
+    <pbcoreExtension>
+        <extension>censorcarddata1: [description1]</extension>
+        <extensionAuthorityUsed>Statens Mediesamling Biografreklamer 1954-1995</extensionAuthorityUsed>
+    </pbcoreExtension>
+    <pbcoreExtension>
+        <extension>censorcarddata2: [description2]</extension>
+        <extensionAuthorityUsed>Statens Mediesamling Biografreklamer 1954-1995</extensionAuthorityUsed>
+    </pbcoreExtension>
+    <pbcoreExtension>
+        <extension>censorcarddata3: [descriptionExt]</extension>
+        <extensionAuthorityUsed>Statens Mediesamling Biografreklamer 1954-1995</extensionAuthorityUsed>
+    </pbcoreExtension>
+    <pbcoreExtension>
+        <extension>censordate: [dateCensorship]</extension>
+        <extensionAuthorityUsed>Statens Mediesamling Biografreklamer 1954-1995</extensionAuthorityUsed>
+    </pbcoreExtension>
+    <pbcoreExtension>
+        <extension>censorestimatedreellength: [formatExtentAnalogue] meter</extension>
+        <extensionAuthorityUsed>Statens Mediesamling Biografreklamer 1954-1995</extensionAuthorityUsed>
+    </pbcoreExtension>
+    <pbcoreExtension>
+        <extension>censorcard: [identifierCensorshipCard]</extension>
+        <extensionAuthorityUsed>Statens Mediesamling Biografreklamer 1954-1995</extensionAuthorityUsed>
+    </pbcoreExtension>
+</PBCoreDescriptionDocument>
