@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
+import java.util.regex.Pattern;
 
 /**
  * Map all biografreklamefilm data to PBCore.
@@ -98,7 +99,7 @@ public class BiografPBCoreMapper {
     //TODO: What to do with audit data (registrant etc.) 13,14,15,16
 
     private static class MappingTuple {
-        enum Type {STRING, INT, DURATION, DATE, EXTENSIONCENSORCARDDATA1, EXTENSIONCENSORCARDDATA2, EXTENSIONCENSORCARDDATA3, EXTENSIONCENSORDATE, EXTENSIONCENSORESTIMATEDREELLENGTH, EXTENSIONCENSORCARD}
+        enum Type {STRING, INT, DURATION, DATE, FILE, EXTENSIONCENSORCARDDATA1, EXTENSIONCENSORCARDDATA2, EXTENSIONCENSORCARDDATA3, EXTENSIONCENSORDATE, EXTENSIONCENSORESTIMATEDREELLENGTH, EXTENSIONCENSORCARD}
 
         final int resultindex;
         final String xpath;
@@ -145,7 +146,7 @@ public class BiografPBCoreMapper {
             new MappingTuple(18, "/p:PBCoreDescriptionDocument/p:pbcoreExtension[6]/p:extension",
                              MappingTuple.Type.EXTENSIONCENSORCARD, true),
             new MappingTuple(19, "/p:PBCoreDescriptionDocument/p:pbcoreInstantiation/p:formatLocation",
-                             MappingTuple.Type.STRING, false),
+                             MappingTuple.Type.FILE, false),
             new MappingTuple(20, "/p:PBCoreDescriptionDocument/p:pbcoreCoverage[1]/p:coverage",
                              MappingTuple.Type.STRING, true)));
 
@@ -192,6 +193,9 @@ public class BiografPBCoreMapper {
                 case INT:
                     int number = resultSet.getInt(pbcoreBiografTemplateMappingTuple.resultindex);
                     value = Integer.toString(number);
+                    break;
+                case FILE:
+                    value = resultSet.getString(pbcoreBiografTemplateMappingTuple.resultindex).replaceAll(Pattern.quote("+"), " ");
                     break;
                 case EXTENSIONCENSORCARDDATA1:
                     value = resultSet.getString(pbcoreBiografTemplateMappingTuple.resultindex);
@@ -354,7 +358,7 @@ public class BiografPBCoreMapper {
         }
 
         //Write pbcore to template with file name
-        String filename = resultSet.getString(19).replace(".mpg", ".xml");
+        String filename = resultSet.getString(19).replace(".mpg", ".xml").replaceAll(Pattern.quote("+"), " ");
         new FileOutputStream(new File(outputdir, filename)).write(
                 DOM.domToString(pbcoreDocument, true).getBytes());
     }
