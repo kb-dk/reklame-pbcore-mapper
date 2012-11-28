@@ -14,14 +14,11 @@
     <artifactId>reklame-pbcore-mapper</artifactId>
     <version>0.1-SNAPSHOT</version>
 
-    <!-- TODO SCM -->
-    <!--
     <scm>
-        <connection>scm:git:git://github.com/statsbiblioteket/doms-client.git</connection>
-        <developerConnection>scm:git:git@github.com:statsbiblioteket/doms-client.git</developerConnection>
-        <url>https://github.com/statsbiblioteket/doms-client</url>
+        <connection>scm:git:git://github.com/statsbiblioteket/reklame-pbcore-mapper.git</connection>
+        <developerConnection>scm:git:git@github.com:statsbiblioteket/reklame-pbcore-mapper.git</developerConnection>
+        <url>https://github.com/statsbiblioteket/reklame-pbcore-mapper</url>
     </scm>
-    -->
 
     <dependencies>
         <dependency>
