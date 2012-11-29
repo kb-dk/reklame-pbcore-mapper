@@ -38,7 +38,7 @@ public class BiografPBCoreMapperTest {
     @Test
     public void testMapCsvDataToPBCoreFiles() throws Exception {
         Properties properties = new Properties();
-        properties.load(getClass().getResourceAsStream("reklamefilm.properties"));
+        properties.load(getClass().getResourceAsStream("/reklamefilm.properties"));
         Class.forName(properties.getProperty("dk.statsbiblioteket.doms.ingest.reklamefilm.dbdriver"));
         Connection c = DriverManager
                 .getConnection(properties.getProperty("dk.statsbiblioteket.doms.ingest.reklamefilm.dburl"),
