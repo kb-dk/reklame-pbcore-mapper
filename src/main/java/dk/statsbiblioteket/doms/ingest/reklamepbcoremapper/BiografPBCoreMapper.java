@@ -251,19 +251,19 @@ public class BiografPBCoreMapper {
         if (subjects.next()) {
             String subjectString = subjects.getString(1);
             if (subjectString.isEmpty()) {
-                nodesToDelete.add(subjectNode);
+                nodesToDelete.add(subjectNode.getParentNode());
             } else {
                 subjectNode.setTextContent(subjectString);
             }
             String subjectString2 = subjects.getString(2);
             if (subjectString2.isEmpty()) {
-                nodesToDelete.add(subjectNode2);
+                nodesToDelete.add(subjectNode2.getParentNode());
             } else {
                 subjectNode2.setTextContent(subjectString2);
             }
         } else {
-            nodesToDelete.add(subjectNode);
-            nodesToDelete.add(subjectNode2);
+            nodesToDelete.add(subjectNode.getParentNode());
+            nodesToDelete.add(subjectNode2.getParentNode());
         }
         subjectStatement.close();
 
