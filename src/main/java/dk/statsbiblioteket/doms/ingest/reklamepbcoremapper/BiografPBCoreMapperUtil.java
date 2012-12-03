@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.util.Properties;
 
 /**
- * Map a file with a utf-8 encoded csv file with TV2 tv commercial metadata to PBCore files.
+ * Map data in a database with cinematic commercial metadata to PBCore files.
  */
 public class BiografPBCoreMapperUtil {
     public static void main(String[] args) throws Exception {
@@ -24,6 +24,7 @@ public class BiografPBCoreMapperUtil {
         Properties properties = new Properties();
         properties.load(new FileInputStream(args[0]));
         outputdir.mkdirs();
+        // Load database driver
         Class.forName(properties.getProperty("dk.statsbiblioteket.doms.ingest.reklamefilm.dbdriver"));
         Connection c = DriverManager
                 .getConnection(properties.getProperty("dk.statsbiblioteket.doms.ingest.reklamefilm.dburl"),
