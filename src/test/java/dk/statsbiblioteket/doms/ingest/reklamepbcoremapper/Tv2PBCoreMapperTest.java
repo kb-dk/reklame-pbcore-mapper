@@ -38,7 +38,7 @@ public class Tv2PBCoreMapperTest {
         assertEquals(226, generatedFiles.length);
         for (File file : generatedFiles) {
             Document d = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(file);
-            assertEquals(41, d.getElementsByTagName("*").getLength());
+            assertEquals(42, d.getElementsByTagName("*").getLength());
             //TODO Test stuff
         }
     }
