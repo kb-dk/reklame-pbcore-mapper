@@ -13,6 +13,7 @@ public class BiografPBCoreMapperUtil {
     public static void main(String[] args) throws Exception {
         if (args.length < 1) {
             System.err.println("Usage: java " + Tv2PBCoreMapperUtil.class.toString() + " <propertiesfile> [outputdir]");
+            System.exit(1);
         }
 
         File outputdir;
