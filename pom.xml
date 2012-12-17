@@ -10,7 +10,7 @@
 
     <groupId>dk.statsbiblioteket.doms.ingest</groupId>
     <artifactId>reklame-pbcore-mapper</artifactId>
-    <version>0.4-SNAPSHOT</version>
+    <version>0.3-SNAPSHOT</version>
 
     <scm>
         <connection>scm:git:git://github.com/statsbiblioteket/reklame-pbcore-mapper.git</connection>
