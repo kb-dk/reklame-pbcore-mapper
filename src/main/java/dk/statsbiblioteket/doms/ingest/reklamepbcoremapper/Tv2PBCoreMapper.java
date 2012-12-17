@@ -17,13 +17,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.TimeZone;
 
 /**
  * Map all tv2 reklamefilm data to PBCore.
  */
 public class Tv2PBCoreMapper {
+    private static final SimpleDateFormat ALTERNATIVE_INPUT_DATE_FORMAT = new SimpleDateFormat("yyyy-MM");
+    private static final SimpleDateFormat ALTERNATIVE_OUTPUT_DATE_FORMAT = new SimpleDateFormat("yyyy-MM");
     private static final SimpleDateFormat INPUT_DATE_FORMAT = new SimpleDateFormat("yyMMdd");
     private static final SimpleDateFormat OUTPUT_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-ddZ");
     private static final SimpleDateFormat DURATION_FORMAT = new SimpleDateFormat("HH:mm:ss");
@@ -103,7 +104,12 @@ public class Tv2PBCoreMapper {
             String value = row.get(pbcoreTv2TemplateMappingTuple.cellindex);
             switch (pbcoreTv2TemplateMappingTuple.type) {
                 case DATE:
-                    value = OUTPUT_DATE_FORMAT.format(INPUT_DATE_FORMAT.parse(value));
+                    if (value != null && !value.isEmpty()) {
+                        value = OUTPUT_DATE_FORMAT.format(INPUT_DATE_FORMAT.parse(value));
+                    } else {
+                        // Fall back to month date
+                        value = ALTERNATIVE_OUTPUT_DATE_FORMAT.format(ALTERNATIVE_INPUT_DATE_FORMAT.parse(row.get(0)));
+                    }
                     break;
                 case DURATION:
                     value = DURATION_FORMAT.format(new Date(Long.parseLong(value) * 1000L));

@@ -42,4 +42,17 @@ public class Tv2PBCoreMapperTest {
             //TODO Test stuff
         }
     }
+
+    @Test
+    public void testMapAltCsvDataToPBCoreFiles() throws Exception {
+        new Tv2PBCoreMapper().mapCsvDataToPBCoreFiles(new File(getClass().getClassLoader().getResource("199501.meta.utf8.csv").getPath()),
+                                                      OUTPUTDIR);
+        File[] generatedFiles = OUTPUTDIR.listFiles();
+        assertEquals(179, generatedFiles.length);
+        for (File file : generatedFiles) {
+            Document d = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(file);
+            assertEquals(42, d.getElementsByTagName("*").getLength());
+            //TODO Test stuff
+        }
+    }
 }
