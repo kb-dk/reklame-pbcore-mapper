@@ -105,7 +105,7 @@ public class Tv2PBCoreMapper {
             switch (pbcoreTv2TemplateMappingTuple.type) {
                 case DATE:
                     if (value != null && !value.isEmpty()) {
-                        value = OUTPUT_DATE_FORMAT.format(INPUT_DATE_FORMAT.parse(value));
+                        value = OUTPUT_DATE_FORMAT.format(INPUT_DATE_FORMAT.parse(String.format("%06d", Integer.parseInt(value))));
                     } else {
                         // Fall back to month date
                         value = ALTERNATIVE_OUTPUT_DATE_FORMAT.format(ALTERNATIVE_INPUT_DATE_FORMAT.parse(row.get(0)));
