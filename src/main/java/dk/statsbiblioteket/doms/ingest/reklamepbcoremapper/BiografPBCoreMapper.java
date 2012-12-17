@@ -10,6 +10,7 @@ import javax.xml.transform.TransformerException;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -195,7 +196,7 @@ public class BiografPBCoreMapper {
                     value = Integer.toString(number);
                     break;
                 case FILE:
-                    value = resultSet.getString(pbcoreBiografTemplateMappingTuple.resultindex).replaceAll(Pattern.quote("+"), " ");
+                    value = URLEncoder.encode(resultSet.getString(pbcoreBiografTemplateMappingTuple.resultindex).replaceAll(Pattern.quote("+"), " "), "UTF-8").replaceAll("\\+", "%20");
                     break;
                 case EXTENSIONCENSORCARDDATA1:
                     value = resultSet.getString(pbcoreBiografTemplateMappingTuple.resultindex);
@@ -358,7 +359,7 @@ public class BiografPBCoreMapper {
         }
 
         //Write pbcore to template with file name
-        String filename = resultSet.getString(19).replace(".mpg", ".xml").replaceAll(Pattern.quote("+"), " ");
+        String filename = URLEncoder.encode(resultSet.getString(19).replace(".mpg", ".xml").replaceAll(Pattern.quote("+"), " "),  "UTF-8").replaceAll("\\+", "%20");
         new FileOutputStream(new File(outputdir, filename)).write(
                 DOM.domToString(pbcoreDocument, true).getBytes());
     }
